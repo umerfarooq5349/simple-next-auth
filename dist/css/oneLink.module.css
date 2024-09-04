@@ -1,0 +1,33 @@
+.container {
+  padding: 24px;
+  margin: auto;
+}
+
+.navLink {
+  color: #a367b1;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin: 24px 16px;
+  padding: 8px 0;
+  position: relative;
+}
+.navLink:hover {
+  color: #ffd1e3;
+  cursor: pointer;
+}
+.navLink:active {
+  color: #ff9ec4;
+}
+.navLink::before {
+  transition: width 300ms ease-in-out;
+  height: 2px;
+  content: " ";
+  position: absolute;
+  background-color: #ffd1e3;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+}
+.navLink:hover::before {
+  width: 100%;
+}/*# sourceMappingURL=oneLink.module.css.map */

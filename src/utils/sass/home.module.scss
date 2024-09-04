@@ -1,0 +1,22 @@
+@import "./theme/theme.scss";
+
+.homeContainer {
+  background-color: $background-alt;
+  color: $text-color-light;
+  padding: $padding-large;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-dark;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.heading {
+  font-size: $font-size-hero;
+  margin-bottom: $margin-large;
+}
+
+.description {
+  font-size: $font-size-regular;
+  margin-bottom: $margin-regular;
+}

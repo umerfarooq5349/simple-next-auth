@@ -1,0 +1,144 @@
+.container {
+  padding: 24px;
+  margin: auto;
+}
+
+.container {
+  padding: 24px;
+  margin: auto;
+}
+
+.signInContainer, .signUpContainer {
+  background-color: #392467;
+  color: #ffd1e3;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  background-color: #ffd1e3;
+  border: 1px solid #a367b1;
+  color: #392467;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 8px;
+  transition: border-color 0.3s ease-in-out;
+}
+.inputField::placeholder {
+  color: #633eb3;
+}
+.inputField:focus {
+  border-color: #a367b1;
+  outline: none;
+}
+
+.link {
+  color: #a367b1;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin-left: 4px;
+}
+.link:hover {
+  color: #ffd1e3;
+  cursor: pointer;
+}
+.link:active {
+  color: #ff9ec4;
+}
+.link:hover {
+  color: #ffd1e3;
+}
+
+.buttonPrimary {
+  background-color: #5d3587;
+  border: 1px solid #392467;
+  color: #ffd1e3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #ffd1e3;
+}
+.buttonPrimary:hover {
+  background-color: #a367b1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.buttonPrimary:active {
+  background-color: #442762;
+}
+.buttonPrimary:disabled {
+  background-color: #633eb3;
+  color: #5d3587;
+  cursor: not-allowed;
+}
+
+.text {
+  margin: 8px;
+  color: #ffd1e3;
+}
+
+.buttonSecondary {
+  background-color: #5d3587;
+  border: 1px solid #392467;
+  color: #ffd1e3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.buttonSecondary:hover {
+  background-color: #a367b1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.buttonSecondary:active {
+  background-color: #442762;
+}
+.buttonSecondary:disabled {
+  background-color: #633eb3;
+  color: #5d3587;
+  cursor: not-allowed;
+}
+
+.link {
+  color: #a367b1;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin-left: 4px;
+}
+.link:hover {
+  color: #ffd1e3;
+  cursor: pointer;
+}
+.link:active {
+  color: #ff9ec4;
+}
+.link:hover {
+  color: #ffd1e3;
+}
+
+.text {
+  margin: 8px;
+  color: #ffd1e3;
+}/*# sourceMappingURL=singup.module.css.map */

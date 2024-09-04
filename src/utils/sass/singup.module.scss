@@ -1,0 +1,43 @@
+@import "./theme/theme.scss";
+@import "./signin.module.scss";
+
+.signUpContainer {
+  @extend .signInContainer;
+}
+
+.heading {
+  @extend .heading !optional;
+}
+
+.form {
+  @extend .form;
+}
+
+.inputField {
+  @extend .inputField;
+}
+
+.signUpButton {
+  @extend .signInButton !optional;
+}
+
+.buttonSecondary {
+  @include buttonStyle(secondary);
+}
+
+.link {
+  @include linkStyle(default);
+  margin-left: 4px;
+  &:hover {
+    color: $text-color-primary;
+  }
+}
+
+//   .buttonPrimary {
+//     @include buttonStyle(secondary);
+//   }
+.text {
+  margin: $margin-small;
+
+  color: $text-color-light;
+}

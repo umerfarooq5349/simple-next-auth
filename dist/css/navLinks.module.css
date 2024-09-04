@@ -1,0 +1,57 @@
+.container {
+  padding: 24px;
+  margin: auto;
+}
+
+.navbarContainer {
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.menuButton,
+.smallScreen {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbarContainer {
+    display: none;
+  }
+  .menuButton {
+    color: #a367b1;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    border: none;
+    top: 0;
+    right: 0;
+    margin: 24px 24px;
+    position: fixed;
+    display: block;
+    outline: none;
+    background-color: transparent;
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  .menuButton:hover {
+    color: #ffd1e3;
+    cursor: pointer;
+  }
+  .menuButton:active {
+    color: #ff9ec4;
+  }
+  .smallScreen {
+    width: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: end;
+    height: 100vh;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+  }
+}/*# sourceMappingURL=navLinks.module.css.map */

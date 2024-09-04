@@ -1,0 +1,37 @@
+@import "./theme/theme.scss";
+
+.profileContainer {
+  background-color: $background-color-light;
+  color: $text-color-dark;
+  padding: $padding-large;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-dark;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: $font-size-heading;
+  margin-bottom: $margin-regular;
+}
+
+.profileDetails {
+  font-size: $font-size-regular;
+  text-align: left;
+  margin-bottom: $margin-large;
+}
+
+.editProfileButton {
+  background-color: $button-color-primary;
+  color: $text-color-light;
+  border: none;
+  padding: $padding-regular;
+  border-radius: $border-radius-medium;
+  cursor: pointer;
+  transition: background-color $transition-speed $transition-ease;
+
+  &:hover {
+    background-color: $button-color-accent;
+  }
+}

@@ -1,0 +1,27 @@
+@import "./theme/theme.scss";
+
+.navLink {
+  @include linkStyle(default);
+  margin: $margin-large $margin-regular;
+  // height: 0;
+
+  padding: $padding-small 0;
+  position: relative;
+
+  &::before {
+    transition: width 300ms ease-in-out;
+    height: 2px;
+    content: " ";
+    position: absolute;
+    background-color: $link-hover-color;
+    width: 0%;
+
+    bottom: 0;
+
+    left: 0;
+  }
+
+  &:hover::before {
+    width: 100%; // Expand to the full width of the parent on hover
+  }
+}

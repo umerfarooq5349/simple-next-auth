@@ -1,0 +1,39 @@
+@import "./theme/theme.scss";
+
+.dashboardContainer {
+  background-color: $background-accent;
+  color: $text-color-primary;
+  padding: $padding-large;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-dark;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: $font-size-heading;
+  margin-bottom: $margin-large;
+}
+
+.cardGrid {
+  display: flex;
+  justify-content: space-around;
+  gap: $margin-regular;
+}
+
+.card {
+  // @include linkStyle(default);
+  background-color: $background-color-light;
+  color: $text-color-dark;
+  padding: $padding-regular;
+  border-radius: $border-radius-medium;
+  box-shadow: $box-shadow-light;
+  flex: 1;
+  text-align: center;
+  transition: box-shadow $transition-speed $transition-ease;
+
+  &:hover {
+    box-shadow: $box-shadow-dark;
+  }
+}
