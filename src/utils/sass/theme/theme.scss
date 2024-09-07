@@ -3,7 +3,7 @@ $primary-color: #392467; // Dark Purple
 $secondary-color: #5d3587; // Medium Purple
 $accent-color: #a367b1; // Light Purple
 $highlight-color: #ffd1e3; // Light Pink
-
+$accent-color-low: #a367b176; // Light Purple
 // Text Colors
 $text-color-dark: $primary-color;
 $text-color-light: $highlight-color;
@@ -14,6 +14,7 @@ $text-color-secondary: $secondary-color;
 $background-color-dark: $primary-color;
 $background-color-light: $highlight-color;
 $background-accent: $secondary-color;
+$background-alt-500: $accent-color-low;
 $background-alt: $accent-color;
 
 // Button Colors

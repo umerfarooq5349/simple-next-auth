@@ -1,11 +1,14 @@
 "use client";
 
-import OneLink from "@/components/navbar/oneLink";
+import OneLink from "./oneLink";
 import styles from "@/utils/sass/navLinks.module.scss";
 import { useEffect, useState } from "react";
 import { CIcon } from "@coreui/icons-react";
 import { cilClearAll, cilUserX, cilX } from "@coreui/icons";
 import { getSession } from "next-auth/react"; // Make sure this is correctly imported for client-side use
+import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 const NavLinks = () => {
   const [open, setOpen] = useState(false);
@@ -13,6 +16,7 @@ const NavLinks = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [userName, setUserName] = useState<string | null>(null);
   const [role, setRole] = useState("");
+  const router = useRouter();
   useEffect(() => {
     async function fetchSession() {
       const session = await getSession(); // Using client-side API to get session
@@ -28,11 +32,11 @@ const NavLinks = () => {
 
     fetchSession();
   }, []);
-
-  const pages = [
-    { title: "Home", route: "/home" },
-    { title: "Profile", route: "/profile" },
-  ];
+  const handleLogout = async (event: React.MouseEventHandler<HTMLElement>) => {
+    await signOut();
+    router.replace("/signin");
+  };
+  const pages = [{ title: "Home", route: "/home" }];
 
   return (
     <div className={styles.nav}>
@@ -54,10 +58,9 @@ const NavLinks = () => {
               key="profile"
               oneLink={{ title: userName || "Profile", route: "/profile" }}
             />
-            <OneLink
-              key="logout"
-              oneLink={{ title: "Logout", route: "/logout" }}
-            />
+            <div onClick={handleLogout} role="button" tabIndex={0}>
+              <OneLink key="logout" oneLink={{ title: "Logout", route: "" }} />
+            </div>
           </>
         ) : (
           <OneLink key="login" oneLink={{ title: "Login", route: "/signin" }} />
@@ -83,22 +86,24 @@ const NavLinks = () => {
             <>
               {isAdmin && (
                 <OneLink
-                  key="dashboard-mobile"
+                  key="dashboard"
                   oneLink={{ title: "Dashboard", route: "/dashboard" }}
                 />
               )}
               <OneLink
-                key="profile-mobile"
+                key="profile"
                 oneLink={{ title: userName || "Profile", route: "/profile" }}
               />
-              <OneLink
-                key="logout-mobile"
-                oneLink={{ title: "Logout", route: "/logout" }}
-              />
+              <div onClick={handleLogout}>
+                <OneLink
+                  key="logout"
+                  oneLink={{ title: "Logout", route: "" }}
+                />
+              </div>
             </>
           ) : (
             <OneLink
-              key="login-mobile"
+              key="login"
               oneLink={{ title: "Login", route: "/signin" }}
             />
           )}

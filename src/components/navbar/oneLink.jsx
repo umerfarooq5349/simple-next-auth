@@ -4,6 +4,7 @@ import { signOut } from "@/auth"
 const OneLink = ({ oneLink }) => {
     return (
         <div className={styles.navLink}>
+
             <Link href={oneLink.route}>
                 {oneLink.title}</Link>
 

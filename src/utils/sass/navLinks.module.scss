@@ -37,12 +37,12 @@
     right: 0;
     bottom: 0;
     display: flex;
-
+    background-color: $background-alt-500;
     flex-direction: column;
     justify-content: center;
     // justify-items: ;
     text-align: end;
-    height: 100vh;
+    // height: 100vh;
     z-index: 999;
     backdrop-filter: blur(5px);
   }

@@ -18,7 +18,12 @@ export async function middleware(request: NextRequest) {
     }
 
     // Redirect unauthenticated users trying to access other routes
-    return NextResponse.redirect(new URL("/signin", request.url));
+    const redirectUrl = new URL("/signin", request.url);
+    redirectUrl.searchParams.set(
+      "message",
+      "Please login first to access this page."
+    );
+    return NextResponse.redirect(redirectUrl);
   } else {
     // If the user is authenticated
     if (
@@ -31,7 +36,7 @@ export async function middleware(request: NextRequest) {
     // Handle route access based on user role
     if (session.user.role === "user") {
       if (url.pathname.startsWith("/dashbord")) {
-        return NextResponse.redirect(new URL("/profile", request.url)); // Users should be redirected to "profile" if trying to access "dashbord"
+        return NextResponse.redirect(new URL("/profile", request.url)); // Users should be redirected to "profile" if trying to access "dashboard"
       }
     } else if (session.user.role === "admin") {
       // Admins have access to all routes except "signin" and "signup"

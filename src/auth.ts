@@ -24,10 +24,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       async authorize(credentials) {
         try {
           let user = null;
-          const response = await axios.post(`${process.env.SERVER}`, {
-            email: credentials?.email,
-            password: credentials?.password,
-          });
+          const response = await axios.post(
+            `${process.env.NEXT_PUBLIC_SERVER}/login`,
+            {
+              email: credentials?.email,
+              password: credentials?.password,
+            }
+          );
           user = response.data.data.user;
 
           if (response.status === 200 && response.data.data.user) {

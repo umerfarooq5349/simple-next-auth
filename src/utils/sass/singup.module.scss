@@ -17,10 +17,6 @@
   @extend .inputField;
 }
 
-.signUpButton {
-  @extend .signInButton !optional;
-}
-
 .buttonSecondary {
   @include buttonStyle(secondary);
 }
@@ -29,7 +25,7 @@
   @include linkStyle(default);
   margin-left: 4px;
   &:hover {
-    color: $text-color-primary;
+    color: $text-color-accent;
   }
 }
 

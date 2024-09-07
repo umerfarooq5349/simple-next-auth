@@ -10,7 +10,7 @@ const SignInPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({ email: "", password: "" });
   const router = useRouter();
-
+  const isFormComplete = formData.email && formData.password;
   const handleSignIn = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
@@ -113,7 +113,7 @@ const SignInPage: React.FC = () => {
         <button
           type="submit"
           className={styles.buttonPrimary}
-          disabled={isLoading}
+          disabled={!isFormComplete || isLoading}
         >
           {isLoading ? "Signing in..." : "Sign In"}
         </button>
@@ -121,7 +121,7 @@ const SignInPage: React.FC = () => {
           type="button"
           className={styles.buttonPrimary}
           onClick={signInWithGoogle}
-          disabled={isLoading}
+          disabled={!isFormComplete || isLoading}
         >
           {isLoading ? "Signing in..." : "Sign in with Google"}
         </button>
@@ -129,7 +129,7 @@ const SignInPage: React.FC = () => {
           type="button"
           className={styles.buttonPrimary}
           onClick={signInWithFacebook}
-          disabled={isLoading}
+          disabled={!isFormComplete || isLoading}
         >
           {isLoading ? "Signing in..." : "Sign in with Facebook"}
         </button>
