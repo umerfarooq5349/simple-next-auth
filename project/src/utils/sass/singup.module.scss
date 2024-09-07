@@ -29,6 +29,14 @@
   }
 }
 
+.providerBtn {
+  display: flex;
+  flex-direction: row;
+  .icon {
+    margin-right: $margin-small;
+  }
+}
+
 //   .buttonPrimary {
 //     @include buttonStyle(secondary);
 //   }

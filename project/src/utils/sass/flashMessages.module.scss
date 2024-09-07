@@ -1,0 +1,21 @@
+@import "./theme/theme.scss";
+.flash_message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $background-alt;
+  color: $text-color-light;
+  padding: $padding-small $padding-large;
+  border-radius: $border-radius-medium;
+  z-index: 1000;
+  box-shadow: $box-shadow-dark;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-border-radius: $border-radius-medium;
+  -moz-border-radius: $border-radius-medium;
+  -ms-border-radius: $border-radius-medium;
+  -o-border-radius: $border-radius-medium;
+}

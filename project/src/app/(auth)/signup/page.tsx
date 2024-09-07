@@ -6,6 +6,8 @@ import axios, { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import Circularloader from "@/components/bikeAnimiation/circularloader";
 import { signIn } from "next-auth/react";
+import CIcon from "@coreui/icons-react";
+import { cibFacebook, cibGoogle } from "@coreui/icons";
 
 const SignUpPage: React.FC = () => {
   const [isFormLoading, setIsFormLoading] = useState(false);
@@ -164,32 +166,40 @@ const SignUpPage: React.FC = () => {
         >
           {isFormLoading ? <Circularloader /> : <div>Sign Up</div>}
         </button>
+        <div className={styles.providerBtn}>
+          <button
+            type="button"
+            className={styles.buttonSecondary}
+            onClick={handleSignUpWithGoogle}
+            disabled={isGoogleLoading}
+          >
+            {isGoogleLoading ? (
+              <Circularloader />
+            ) : (
+              <div>
+                <CIcon icon={cibGoogle} size="lg" className={styles.icon} />
+                Sign up with Google
+              </div>
+            )}
+          </button>
 
-        <button
-          type="button"
-          className={styles.buttonSecondary}
-          onClick={handleSignUpWithGoogle}
-          disabled={isGoogleLoading}
-        >
-          {isGoogleLoading ? (
-            <Circularloader />
-          ) : (
-            <div>Sign up with Google</div>
-          )}
-        </button>
-
-        <button
-          type="button"
-          className={styles.buttonSecondary}
-          onClick={handleSignUpWithFacebook}
-          disabled={isFacebookLoading}
-        >
-          {isFacebookLoading ? (
-            <Circularloader />
-          ) : (
-            <div>Sign up with Facebook</div>
-          )}
-        </button>
+          <button
+            type="button"
+            className={styles.buttonSecondary}
+            onClick={handleSignUpWithFacebook}
+            disabled={isFacebookLoading}
+          >
+            {isFacebookLoading ? (
+              <Circularloader />
+            ) : (
+              <div>
+                {" "}
+                <CIcon icon={cibFacebook} size="lg" className={styles.icon} />
+                Sign up with Facebook
+              </div>
+            )}
+          </button>
+        </div>
       </form>
     </div>
   );

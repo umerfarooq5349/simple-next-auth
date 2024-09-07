@@ -1,12 +1,22 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import styles from "@/utils/sass/profile.module.scss";
-import { auth } from "@/auth";
 import Link from "next/link";
-// import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useFlashMessage } from "@/context/flashMessageContext";
+import { useSession } from "next-auth/react";
 
 const ProfilePage: React.FC = async () => {
-  const session = await auth();
-  // const router=useRouter()
+  const { data: session } = useSession();
+  const searchParams = useSearchParams();
+  const { setMessage } = useFlashMessage();
+
+  useEffect(() => {
+    const message = searchParams.get("message");
+    if (message) {
+      setMessage(message);
+    }
+  }, []);
   return (
     <div className={styles.profileContainer}>
       <h1 className={styles.heading}>Your Profile</h1>
@@ -17,13 +27,13 @@ const ProfilePage: React.FC = async () => {
           <img src={session!.user.photo} alt={session!.user.name} />
         </p>
         <p>
-          <strong>Email:</strong> {session!.user?.email}
+          <strong>Email:</strong> {session!.user.email}
         </p>
         <p>
-          <strong>Role:</strong> {session!.user?.role}
+          <strong>Role:</strong> {session!.user.role}
         </p>
         <p>
-          <strong>Id:</strong> {session!.user?.id}
+          <strong>Id:</strong> {session!.user.id}
         </p>
       </div>
 

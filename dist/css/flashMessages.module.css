@@ -1,12 +1,25 @@
+.container {
+  padding: 24px;
+  margin: auto;
+}
+
 .flash_message {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f0ad4e;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: #a367b1;
+  color: #ffd1e3;
+  padding: 8px 24px;
+  border-radius: 8px;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }/*# sourceMappingURL=flashMessages.module.css.map */

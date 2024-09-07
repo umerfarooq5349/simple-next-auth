@@ -81,7 +81,7 @@ $button-styles: (
     hover-box-shadow: $box-shadow-dark,
     active-background-color: darken($button-color-primary, 10%),
     disabled-background-color: lighten($button-color-secondary, 20%),
-    disabled-color: $text-color-secondary,
+    disabled-color: $text-color-light,
   ),
   secondary: (
     background-color: $button-color-secondary,
@@ -94,7 +94,7 @@ $button-styles: (
     hover-box-shadow: $box-shadow-dark,
     active-background-color: darken($button-color-secondary, 10%),
     disabled-background-color: lighten($button-color-primary, 20%),
-    disabled-color: $text-color-secondary,
+    disabled-color: $text-color-accent,
   ),
 );
 
@@ -152,6 +152,7 @@ $hero-styles: (
   border-radius: $border-radius-large;
   transition: background-color $transition-speed $transition-ease,
     box-shadow $transition-speed $transition-ease;
+  margin: $margin-small;
   &:hover {
     background-color: map-get($styles, hover-background-color);
     color: map-get($styles, hover-text-color);

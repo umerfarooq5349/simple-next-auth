@@ -76,6 +76,7 @@
   padding: 16px;
   border-radius: 12px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 8px;
   color: #ffd1e3;
 }
 .buttonPrimary:hover {
@@ -88,13 +89,21 @@
 }
 .buttonPrimary:disabled {
   background-color: #633eb3;
-  color: #5d3587;
+  color: #a367b1;
   cursor: not-allowed;
 }
 
 .text {
   margin: 8px;
   color: #ffd1e3;
+}
+
+.providerBtn {
+  display: flex;
+  flex-direction: row;
+}
+.providerBtn .icon {
+  margin-right: 8px;
 }
 
 .buttonSecondary {
@@ -106,6 +115,7 @@
   padding: 16px;
   border-radius: 12px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 8px;
 }
 .buttonSecondary:hover {
   background-color: #a367b1;
@@ -117,7 +127,7 @@
 }
 .buttonSecondary:disabled {
   background-color: #633eb3;
-  color: #5d3587;
+  color: #a367b1;
   cursor: not-allowed;
 }
 
@@ -136,6 +146,14 @@
 }
 .link:hover {
   color: #a367b1;
+}
+
+.providerBtn {
+  display: flex;
+  flex-direction: row;
+}
+.providerBtn .icon {
+  margin-right: 8px;
 }
 
 .text {
