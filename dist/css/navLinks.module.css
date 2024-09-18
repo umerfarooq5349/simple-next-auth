@@ -47,11 +47,11 @@
     right: 0;
     bottom: 0;
     display: flex;
-    background-color: rgba(163, 103, 177, 0.462745098);
+    background-color: rgba(76, 43, 84, 0.462745098);
     flex-direction: column;
     justify-content: center;
     text-align: end;
     z-index: 999;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
   }
 }/*# sourceMappingURL=navLinks.module.css.map */

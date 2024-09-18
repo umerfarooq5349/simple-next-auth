@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
-import { MongoDBAdapter } from "@auth/mongodb-adapter";
-import client from "@/utils/db/db";
+// import { MongoDBAdapter } from "@auth/mongodb-adapter";
+// import client from "./lib/db";
 import axios, { AxiosError } from "axios";
 import Facebook from "next-auth/providers/facebook";
 

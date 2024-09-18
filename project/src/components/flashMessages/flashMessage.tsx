@@ -10,7 +10,7 @@ const FlashMessage = () => {
     if (message) {
       const timer = setTimeout(() => {
         clearMessage();
-      }, 20000); // Clear message after 5 seconds
+      }, 3000); // Clear message after 5 seconds
 
       return () => clearTimeout(timer);
     }

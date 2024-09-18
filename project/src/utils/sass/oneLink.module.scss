@@ -4,10 +4,14 @@
   @include linkStyle(default);
   margin: $margin-large $margin-regular;
   // height: 0;
-
   padding: $padding-small 0;
   position: relative;
 
+  // text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
   &::before {
     transition: width 300ms ease-in-out;
     height: 2px;
@@ -15,10 +19,12 @@
     position: absolute;
     background-color: $link-hover-color;
     width: 0%;
-
     bottom: 0;
-
     left: 0;
+    -webkit-transition: width 300ms ease-in-out;
+    -moz-transition: width 300ms ease-in-out;
+    -ms-transition: width 300ms ease-in-out;
+    -o-transition: width 300ms ease-in-out;
   }
 
   &:hover::before {

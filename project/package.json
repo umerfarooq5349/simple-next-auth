@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth/mongodb-adapter": "^3.4.2",
+    "@auth/mongodb-adapter": "^3.5.0",
     "@coreui/coreui": "^5.1.2",
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-react": "^2.3.0",
@@ -17,10 +17,12 @@
     "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "css-loader": "^7.1.2",
-    "mongodb": "^6.8.0",
+    "install": "^0.13.0",
+    "mongodb": "^6.9.0",
     "mongoose": "^8.6.0",
     "next": "14.2.7",
     "next-auth": "^5.0.0-beta.20",
+    "npm": "^10.8.3",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",

@@ -10,6 +10,11 @@
   margin: 24px 16px;
   padding: 8px 0;
   position: relative;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
 }
 .navLink:hover {
   color: #ffd1e3;
@@ -27,6 +32,10 @@
   width: 0%;
   bottom: 0;
   left: 0;
+  -webkit-transition: width 300ms ease-in-out;
+  -moz-transition: width 300ms ease-in-out;
+  -ms-transition: width 300ms ease-in-out;
+  -o-transition: width 300ms ease-in-out;
 }
 .navLink:hover::before {
   width: 100%;
